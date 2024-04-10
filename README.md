@@ -50,8 +50,8 @@ The published model can be tested here: https://loan-application-service-zem3i4a
 
 Use the following commands to test how the model predicts (assuming python is installed and final_valid.pkl file is downloaded):
 ```shell
-python publishing/predict_one.py
+python deployment/predict_one.py
 ```
 ```shell
-python publishing/predict_batch.py
+python deployment/predict_batch.py
 ```
