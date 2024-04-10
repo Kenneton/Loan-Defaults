@@ -10,7 +10,7 @@ The main objective of the project is:
 To achieve this main goal, the following secondary objectives were completed:
 1. Perform exploratory data analysis on the loans
 2. Formally test hypothesis to confirm assumptions
-3. Develop a binary classifier with enough predictive ability for the task\
+3. Develop a binary classifier with enough predictive ability for the task
 4. Tune the model to Home Credit's business objectives
 5. Deploy the trained model so predictions can be made through and API
 
@@ -25,7 +25,7 @@ From exploratory data analysis and hypothesis testing, the following insights we
 ## Model Selection
 Two models were built:
 1. **Minimalistic Model** - Logistic Regression model, using 35 features from the main loans application file. Highly null features as well as low variance and highly correlated features were dropped. Random Search was used for hyperparameter tunning.
-2. **Main Model** - LightGMB classifier. The model was created by aggregating all the features from all the supporting files using featuretools package. Then, Features were selected using a mix of: dropping null and single-value columns, dropping columns with 0 LightGBM importance scores. Then, RFECV (recursive feature elimination with cross-validation) was used and only rank 1 features were selected, giving us 162 features. Finally, Optuna was used for hyperparameter tunning. This model was selected for deployment.
+2. **Main Model** - LightGMB classifier. The model was created by aggregating all the features from all the supporting files using featuretools package. Then, Features were selected using a mix of: dropping null and single-value columns, dropping columns with 0 LightGBM importance scores. Then, RFECV (recursive feature elimination with cross-validation) was used and only rank 1 features were selected, giving us 162 features for our final model. Finally, Optuna was used for hyperparameter tunning. This model was selected for deployment.
 
 ![AUC scores](images/model_auc.png)
 
@@ -36,12 +36,12 @@ To tune the model for profitability, the following assumptions were made:
 * Total Rate of Return on a non-default loan is ~10% on the total credit amount, after accounting for related expenses.
 
 ![Threshold Analysis](images/threshold_analysis.png)
-Using these assumptions to estimate profits, the threshold was moved to 0.77. From the chart above, we see that adjusting the threshold is crucial. Otherwise, the model would be net negative, and it only produces positive financial value in a specific threhsold range (from about 0.65 to 0.91).
+Using these assumptions to estimate profits, the threshold was moved to 0.77. From the chart above, we see that adjusting the threshold is crucial. Otherwise, the model would be net negative, and it only produces positive financial value in a specific threshold range (from about 0.65 to 0.91).
 
 In the chart below, we can see the estimated impact on the financials for a sample of ~15k loans in the validation set, given that the model is used at the end of loan application process to indicate the likelihood of default. Although ~3% is not ground braking results, i
 ![Waterfall](images/financial_impact.png)
 
-Although ~3% icrease in estimated profits is not ground braking results, it can be a very significant improvement for a mature and optimized busines such as Home Credit.
+Although ~3% increase in estimated profits is not ground braking results, it can be a very significant improvement for a mature and optimized business such as Home Credit.
 
 ## Prediction Service
 The model was published using FastAPI, containerized with Docker and uploaded to Googles Artifact Registry.
