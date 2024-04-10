@@ -38,7 +38,8 @@ To tune the model for profitability, the following assumptions were made:
 ![Threshold Analysis](images/threshold_analysis.png)
 Using these assumptions to estimate profits, the threshold was moved to 0.77. From the chart above, we see that adjusting the threshold is crucial. Otherwise, the model would be net negative, and it only produces positive financial value in a specific threshold range (from about 0.65 to 0.91).
 
-In the chart below, we can see the estimated impact on the financials for a sample of ~15k loans in the validation set, given that the model is used at the end of loan application process to indicate the likelihood of default. Although ~3% is not ground braking results, i
+In the chart below, we can see the estimated impact on the financials for a sample of ~15k loans in the validation set, given that the model is used at the end of loan application process to indicate the likelihood of default. 
+
 ![Waterfall](images/financial_impact.png)
 
 Although ~3% increase in estimated profits is not ground braking results, it can be a very significant improvement for a mature and optimized business such as Home Credit.
