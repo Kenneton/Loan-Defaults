@@ -48,10 +48,10 @@ Although ~3% increase in estimated profits is not ground braking results, it can
 The model was published using FastAPI, containerized with Docker and uploaded to Googles Artifact Registry.
 The published model can be tested here: https://loan-application-service-zem3i4ajwq-lz.a.run.app/docs .
 
-Use the following commands to test how the model predicts (assuming python is installed and final_valid.pkl file is downloaded):
+Use the following commands in the `deployment` folder to test how the model predicts (assuming python is installed and final_valid.pkl file is downloaded):
 ```shell
-python deployment/predict_one.py
+python predict_one.py
 ```
 ```shell
-python deployment/predict_batch.py
+python predict_batch.py
 ```
