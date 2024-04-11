@@ -41,6 +41,7 @@ Two models were built:
 
 ## Business Metrics
 ![Confusion Matrix](images/confusion_matrix.png)
+
 To tune the model for profitability, the following assumptions were made:
 * When loan is defaulted, HomeCredit is able to recover 70% of the loan credit amount, thus resulting in a 30% LGD (Loss Given Default).
 * Total Rate of Return on a non-default loan is ~10% on the total credit amount, after accounting for related expenses.
