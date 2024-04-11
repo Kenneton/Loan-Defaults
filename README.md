@@ -17,6 +17,7 @@ To achieve this main goal, the following secondary objectives were completed:
 ## Results
 
 ROC AUC was used to evaluate model performance. Value of 0.783 was reached for the test set.
+
 In the chart below, we can see the estimated impact on the financials for a sample of ~15k loans in the validation set, given that the model is used at the end of loan application process to indicate the likelihood of default. 
 
 ![Waterfall](images/financial_impact.png)
